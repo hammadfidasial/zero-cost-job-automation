@@ -6,7 +6,16 @@ description: Set up, audit, operate, and scale a $0/month Google Sheets + Google
 # Zero-Cost Job Application Automation (v3.4)
 
 Use this skill whenever helping a user or career consultant build, deploy, audit, troubleshoot, or scale a **$0/month job application automation system** powered by Google Sheets, Google Apps Script (`Code.gs` v3.4), the free-tier Gemini API (`gemini-3.5-flash-lite`), and the free Simplify Copilot Chrome extension.
+## Step 0: Mandatory Pre-Flight Prerequisites (Always Run First)
 
+Before deploying `Code.gs`, drafting emails, or generating Portal Apply Kits, verify that the user has completed these manual one-time prerequisites. If any item is missing, guide the user through completing it first:
+
+1. **Dedicated Chrome Profile & Gmail:** Open the candidate's Gmail in its own Chrome profile so Gmail, Drive, Apps Script, and Simplify sessions never collide.
+2. **Google Drive Folder & Verified Docs:** Create one folder in the candidate's Drive with a clean ATS `CV.pdf` and supporting PDFs (diplomas, licenses, language scores, references), and copy its URL.
+3. **Free Gemini API Key:** Create a free API key at `aistudio.google.com` (stored later via **Job Automation -> 1. Set Gemini API Key**, never in cells or code).
+4. **Base Google Sheet (5 Tabs):** Create a blank Sheet with `Settings`, `Client Profile`, `Email Jobs`, `Portal Jobs`, and `Summary` (`Portal Apply Kits` is auto-created by `Code.gs`).
+5. **One-Time Apps Script Setup & Authorization:** Paste `Code.gs` in **Extensions -> Apps Script**, reload the Sheet, set the API key, and complete Google's one-time OAuth approval.
+6. **Free Simplify Copilot (For Portal Jobs):** Install Simplify Copilot, upload only the clean ATS `CV.pdf`, and skip paid upgrades.
 ## Non-Negotiable Guardrails
 
 1. **Zero-Cost Stack ($0/month):**

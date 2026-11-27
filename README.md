@@ -143,6 +143,11 @@ Use open-ended ranges (`P2:P`, `D2:D`, `S2:S`, `T2:T`, `U2:U`, `Z2:Z`) so dashbo
 - Use the included `SKILL.md` with your AI assistant to standardize onboarding, sheet auditing, and Master Autofill Profile creation across clients.
 
 ---
+## Author
+
+Built by **Hammad Hussain** — AI Automation Expert & Full-Stack Developer.
+
+- GitHub: `https://github.com/hammadfidasial`
 
 ## License
 

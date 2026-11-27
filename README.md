@@ -1,4 +1,4 @@
-[banner.jpg]
+[banner.jpg.png]
 # Zero-Cost Job Application Automation System (v3.4)
 
 A **$0/month**, privacy-first job application automation stack built on **Google Sheets**, **Google Apps Script**, the **Google Gemini API** (free tier), and the free **[Simplify Copilot](https://simplify.jobs/copilot)** Chrome extension.

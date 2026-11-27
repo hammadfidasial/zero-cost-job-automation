@@ -116,7 +116,31 @@ Use open-ended ranges (`P2:P`, `D2:D`, `S2:S`, `T2:T`, `U2:U`, `Z2:Z`) so dashbo
 | **Human Action Needed** | `=COUNTIF('Email Jobs'!U2:U, "YES")` | `=COUNTIF('Portal Jobs'!Z2:Z, "YES")` |
 
 ---
+## Before You Start: Manual Prep vs. Auto-Created
 
+Before running `Code.gs` or `SKILL.md`, complete these one-time manual steps so the automation has everything it needs:
+
+| Step | Who Does It | What You Need to Do |
+| :--- | :--- | :--- |
+| **1. Dedicated Chrome Profile & Gmail** | Manual (You) | Sign in to the candidate's Gmail in its own Chrome profile (mandatory for multi-client agencies so sessions never mix). |
+| **2. Google Drive Folder & Documents** | Manual (You) | Create one Drive folder containing a clean ATS `CV.pdf` plus verified supporting PDFs (diplomas, licenses, IELTS, references) and copy the folder URL. |
+| **3. Free Gemini API Key** | Manual (You) | Generate a free key at [Google AI Studio](https://aistudio.google.com/). Never paste it into sheet cells or public repos. |
+| **4. Base Google Sheet (5 Tabs)** | Manual (You) | Create a blank Google Sheet with 5 tabs: `Settings`, `Client Profile`, `Email Jobs`, `Portal Jobs`, and `Summary`. |
+| **5. Paste `Code.gs` & Authorize** | Manual (One-Time) | Open **Extensions -> Apps Script**, paste `Code.gs` (`Ctrl+A -> Ctrl+V -> Ctrl+S`), reload the Sheet, run **Job Automation -> 1. Set Gemini API Key**, and accept Google's OAuth permission prompt. |
+| **6. Free Simplify Copilot (Optional)** | Manual (You) | Install [Simplify Copilot](https://simplify.jobs/copilot) in the candidate's Chrome profile, upload only `CV.pdf`, and skip paid Simplify+ / Autopilot. |
+| **7. Auto-Created by `Code.gs` & Skill** | **Automatic** | Creates the `Portal Apply Kits` tab (36px compact rows), `Portal Cover Letters/` Drive subfolder, Cover Letter PDFs, `Job Automation` menu, hourly sync trigger, Gmail drafts, and `Master Autofill Profile` Doc. |
+
+## How to Use `SKILL.md` with AI Assistants (Gemini, Claude, ChatGPT & Codex)
+
+| AI Platform | How to Load `SKILL.md` |
+| :--- | :--- |
+| **Gemini** | Save `SKILL.md` as a reusable Skill or paste it into a **Gemini Gem**. |
+| **Claude (Web / Claude Code)** | Upload `SKILL.md` + `Code.gs` to a **Claude Project**, or place it at `.claude/skills/zero-cost-job-automation/SKILL.md`. |
+| **ChatGPT** | Paste `SKILL.md` into **Custom GPT Instructions** (or a Project) and upload `Code.gs` as a Knowledge file. |
+| **Codex / Cursor / AI IDEs** | Save `SKILL.md` in `.agents/skills/zero-cost-job-automation/SKILL.md` (or `.cursor/rules/`). |
+
+### Copy-Paste Starter Prompt (Works in Any AI Tool)
+> Follow `SKILL.md` (`zero-cost-job-automation` v3.4) strictly. Start with **Step 0: Mandatory Pre-Flight Prerequisites**—verify my Chrome profile, Drive folder (`CV.pdf` + supporting docs), free Gemini API key, and base 5-tab Google Sheet first. Once confirmed, help me populate `Settings`, `Client Profile`, `Summary` formulas, and a `Master Autofill Profile` Doc (excluding government IDs).
 ## 10-Minute Quickstart Setup
 
 1. **Prepare Google Drive:** Create a dedicated folder in the candidate's Google Drive containing `CV.pdf` and supporting documents (licenses, diplomas, language certificates).
